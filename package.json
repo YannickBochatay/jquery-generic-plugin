@@ -1,0 +1,39 @@
+{
+  "name": "jquery-plugin",
+  "version": "0.0.1",
+  "description": "generic constructor for jquery plugins",
+  "main": "lib/index.js",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-env": "^1.1.4",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "eslint": "^3.12.2",
+    "watchify": "^3.8.0"
+  },
+  "scripts": {
+    "build:lib": "babel src -d lib",
+    "build:ex": "browserify example/index.js -v -t babelify -o build/bundle.js",
+    "lint": "eslint example --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YannickBochatay/jquery-plugin.git"
+  },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "javascript"
+  ],
+  "author": "Yannick Bochatay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YannickBochatay/jquery-plugin/issues"
+  },
+  "homepage": "https://github.com/YannickBochatay/jquery-plugin#readme"
+}
