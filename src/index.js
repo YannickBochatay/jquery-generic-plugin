@@ -3,13 +3,13 @@
  * @author Yannick Bochatay
  */
 
-import $ from "jquery"
+import jQuery from "jquery"
 
 export default class Plugin {
 
   set(options) {
 
-    if (!$.isPlainObject(options) ) throw new Error("l'argument de la méthode set n'est pas un objet conforme")
+    if (!jQuery.isPlainObject(options) ) throw new Error("l'argument de la méthode set n'est pas un objet conforme")
 
     for (const n in options) if (n in this) this[n] = options[n]
 
@@ -22,7 +22,7 @@ export default class Plugin {
  * @param {Object} Constructor Objet constructeur à binder
  * @returns {Object} le plugin jQuery
  */
-Plugin.bind2jQuery = (Constructor) => {
+Plugin.bind2jQuery = (Constructor, $ = jQuery) => {
 
   const name = Constructor.name.charAt(0).toLowerCase() + Constructor.name.slice(1)
   const dataName = "yb." + name

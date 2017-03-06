@@ -2,7 +2,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27,93 +27,93 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var BackToTop = function (_Plugin) {
-  _inherits(BackToTop, _Plugin);
+    _inherits(BackToTop, _Plugin);
 
-  function BackToTop(el, opt) {
-    _classCallCheck(this, BackToTop);
+    function BackToTop(el, opt) {
+        _classCallCheck(this, BackToTop);
 
-    var _this = _possibleConstructorReturn(this, (BackToTop.__proto__ || Object.getPrototypeOf(BackToTop)).call(this));
+        var _this = _possibleConstructorReturn(this, (BackToTop.__proto__ || Object.getPrototypeOf(BackToTop)).call(this));
 
-    _this.checkScroll = _this.checkScroll.bind(_this);
-    _this.backToTop = _this.backToTop.bind(_this);
+        _this.checkScroll = _this.checkScroll.bind(_this);
+        _this.backToTop = _this.backToTop.bind(_this);
 
-    _this.$el = (0, _jquery2.default)(el);
+        _this.$el = (0, _jquery2.default)(el);
 
-    _this.displayPoint = 300;
+        _this.displayPoint = 300;
 
-    _this.content = window;
+        _this.content = window;
 
-    if (opt) _this.set(opt);
+        if (opt) _this.set(opt);
 
-    return _this;
-  }
-
-  /**
-   * Retour en haut de page
-   * @returns {undefined}
-   */
-
-
-  _createClass(BackToTop, [{
-    key: "backToTop",
-    value: function backToTop() {
-
-      (0, _jquery2.default)(this.content === window ? "html,body" : this.content).animate({ scrollTop: 0 }, 300);
+        return _this;
     }
 
     /**
-     * Teste si on a dépassé le point d'affichage de l'élément
-     * @returns {Boolean} true si point dépassé
-     */
-
-  }, {
-    key: "isScrolled",
-    value: function isScrolled() {
-
-      return (0, _jquery2.default)(this.content).scrollTop() > this.displayPoint;
-    }
-    /**
-     * Affiche ou masque l'élément en fonction du scroll
+     * Retour en haut de page
      * @returns {undefined}
      */
 
-  }, {
-    key: "checkScroll",
-    value: function checkScroll() {
 
-      this.$el["fade" + (this.isScrolled() ? "In" : "Out")]();
-    }
-    /**
-     * Active le plugin
-     * @returns {undefined}
-     */
+    _createClass(BackToTop, [{
+        key: "backToTop",
+        value: function backToTop() {
 
-  }, {
-    key: "enable",
-    value: function enable() {
+            (0, _jquery2.default)(this.content === window ? "html,body" : this.content).animate({ scrollTop: 0 }, 300);
+        }
 
-      (0, _jquery2.default)(this.content).on("scroll", this.checkScroll);
+        /**
+         * Teste si on a dépassé le point d'affichage de l'élément
+         * @returns {Boolean} true si point dépassé
+         */
 
-      this.$el.on("click", this.backToTop);
+    }, {
+        key: "isScrolled",
+        value: function isScrolled() {
 
-      this.$el[this.isScrolled() ? "show" : "hide"]();
-    }
-    /**
-     * Désactive le plugin
-     * @returns {undefined}
-     */
+            return (0, _jquery2.default)(this.content).scrollTop() > this.displayPoint;
+        }
+        /**
+         * Affiche ou masque l'élément en fonction du scroll
+         * @returns {undefined}
+         */
 
-  }, {
-    key: "destroy",
-    value: function destroy() {
+    }, {
+        key: "checkScroll",
+        value: function checkScroll() {
 
-      (0, _jquery2.default)(this.content).off("scroll", this.checkScroll);
+            this.$el["fade" + (this.isScrolled() ? "In" : "Out")]();
+        }
+        /**
+         * Active le plugin
+         * @returns {undefined}
+         */
 
-      this.$el.off("click", this.backToTop);
-    }
-  }]);
+    }, {
+        key: "enable",
+        value: function enable() {
 
-  return BackToTop;
+            (0, _jquery2.default)(this.content).on("scroll", this.checkScroll);
+
+            this.$el.on("click", this.backToTop);
+
+            this.$el[this.isScrolled() ? "show" : "hide"]();
+        }
+        /**
+         * Désactive le plugin
+         * @returns {undefined}
+         */
+
+    }, {
+        key: "destroy",
+        value: function destroy() {
+
+            (0, _jquery2.default)(this.content).off("scroll", this.checkScroll);
+
+            this.$el.off("click", this.backToTop);
+        }
+    }]);
+
+    return BackToTop;
 }(_src2.default);
 
 // transformation du constructeur en plugin jQuery
@@ -10360,7 +10360,7 @@ return jQuery;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
@@ -10377,23 +10377,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Plugin = function () {
-  function Plugin() {
-    _classCallCheck(this, Plugin);
-  }
-
-  _createClass(Plugin, [{
-    key: "set",
-    value: function set(options) {
-
-      if (!_jquery2.default.isPlainObject(options)) throw new Error("l'argument de la méthode set n'est pas un objet conforme");
-
-      for (var n in options) {
-        if (n in this) this[n] = options[n];
-      }
+    function Plugin() {
+        _classCallCheck(this, Plugin);
     }
-  }]);
 
-  return Plugin;
+    _createClass(Plugin, [{
+        key: "set",
+        value: function set(options) {
+
+            if (!_jquery2.default.isPlainObject(options)) throw new Error("l'argument de la méthode set n'est pas un objet conforme");
+
+            for (var n in options) {
+                if (n in this) this[n] = options[n];
+            }
+        }
+    }]);
+
+    return Plugin;
 }();
 
 /**
@@ -10405,50 +10405,52 @@ var Plugin = function () {
 
 exports.default = Plugin;
 Plugin.bind2jQuery = function (Constructor) {
+    var $ = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _jquery2.default;
 
-  var name = Constructor.name.charAt(0).toLowerCase() + Constructor.name.slice(1);
-  var dataName = "yb." + name;
 
-  function checkMethod(methode) {
+    var name = Constructor.name.charAt(0).toLowerCase() + Constructor.name.slice(1);
+    var dataName = "yb." + name;
 
-    return typeof methode == "string" && methode in Constructor.prototype && methode.charAt(0) !== "_";
-  }
+    function checkMethod(methode) {
 
-  _jquery2.default.fn[name] = function execPluginMethod() {
-
-    var methode = void 0,
-        options = void 0;
-
-    if (_jquery2.default.isPlainObject(arguments.length <= 0 ? undefined : arguments[0]) || (arguments.length <= 0 ? undefined : arguments[0]) == null) {
-
-      methode = "enable";
-      options = arguments.length <= 0 ? undefined : arguments[0];
-    } else {
-
-      methode = arguments.length <= 0 ? undefined : arguments[0];
-      options = arguments.length <= 1 ? undefined : arguments[1];
+        return typeof methode == "string" && methode in Constructor.prototype && methode.charAt(0) !== "_";
     }
 
-    if (!checkMethod(methode)) throw new Error(methode + " : méthode incorrecte");
+    $.fn[name] = function execPluginMethod() {
 
-    return this.each(function applyMethod() {
+        var methode = void 0,
+            options = void 0;
 
-      var $this = (0, _jquery2.default)(this);
-      var data = $this.data(dataName);
+        if ($.isPlainObject(arguments.length <= 0 ? undefined : arguments[0]) || (arguments.length <= 0 ? undefined : arguments[0]) == null) {
 
-      if (!data) {
+            methode = "enable";
+            options = arguments.length <= 0 ? undefined : arguments[0];
+        } else {
 
-        data = new Constructor(this);
-        $this.data(dataName, data);
-      }
+            methode = arguments.length <= 0 ? undefined : arguments[0];
+            options = arguments.length <= 1 ? undefined : arguments[1];
+        }
 
-      data[methode](options);
-    });
-  };
+        if (!checkMethod(methode)) throw new Error(methode + " : méthode incorrecte");
 
-  _jquery2.default.fn[name].constructor = Constructor;
+        return this.each(function applyMethod() {
 
-  return _jquery2.default.fn[name];
+            var $this = $(this);
+            var data = $this.data(dataName);
+
+            if (!data) {
+
+                data = new Constructor(this);
+                $this.data(dataName, data);
+            }
+
+            data[methode](options);
+        });
+    };
+
+    $.fn[name].constructor = Constructor;
+
+    return $.fn[name];
 };
 
 },{"jquery":3}]},{},[2]);
